@@ -1,0 +1,40 @@
+{
+  "name": "sosialmedia",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Sosial Media Application",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "jsdoc": "^4.0.2",
+    "prettier": "^2.8.7",
+    "sass": "^1.62.0",
+    "vite": "^4.2.0",
+    "vite-plugin-eslint": "^1.8.1"
+  },
+  "keywords": [
+    "CSS",
+    "Frameworks",
+    "Bootstrap",
+    "SCSS",
+    "SASS",
+    "Vite"
+  ],
+  "author": "Lasse R <lasron50863@stud.noroff.no>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NoroffFEU/css-frameworks-ca/issues"
+  },
+  "homepage": "https://github.com/NoroffFEU/css-frameworks-ca#readme",
+  "dependencies": {
+    "@popperjs/core": "^2.11.7",
+    "bootstrap": "^5.2.3"
+  }
+}
+
