@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+
+<form id="registerForm" method="post" action="/auth/register">
+  <div class="form-group mb-3">
+    <label for="name">Name</label>
+    <input class="form-control" id="name" type="text" name="name" required pattern="^[\w]+$" title="User name must only contain lower case and uppper case letters, numbers and underscore (_). Example: My_User123">
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="email">Email</label>
+    <input class="form-control" id="email" type="email" name="email" required pattern="^[\w\-.]+@(stud.)?noroff.no$" title="Only @(stud.)noroff.no domains are allowed to register.">
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="password">Password</label>
+    <input class="form-control" id="password" type="password" name="password" required minlength="8">
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="banner">Banner</label>
+    <input class="form-control" id="banner" type="url" name="banner">
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="avatar">Avatar</label>
+    <input class="form-control" id="avatar" type="url" name="avatar">
+  </div>
+
+  <button class="btn btn-success">Register</button>
+</form>
+
+</body>
+</html>

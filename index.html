@@ -1,173 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <!--    <link rel="icon" type="image/svg+xml" href="/src/assets/svg/vite.svg"/>-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <!--    <link rel="icon" type="image/svg+xml" href="/src/assets/svg/vite.svg"/>-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Sosial media</title>
+  <title>Social media</title>
 
 </head>
 
-<body class="d-flex flex-column h-100  text-bg-dark">
+<body class="d-flex flex-column h-100 text-bg-dark">
 
 
-<header class="mb-auto">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/pages/feed/index.html">Feed</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                           aria-expanded="false">
-                            Profile
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/pages/profile/index.html">Dashboard</a></li>
+<header class="sticky-top mb-auto">
+  <nav class="navbar navbar-expand-lg navbar-dark ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/feed/index.html">Feed</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+               aria-expanded="false">
+              Profile
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/pages/profile/index.html">Dashboard</a></li>
 
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Logout</a></li>
-                        </ul>
-                    </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Logout</a></li>
+            </ul>
+          </li>
 
-                </ul>
-                <form role="search">
-                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                </form>
-            </div>
-        </div>
+        </ul>
+        <form role="search">
+          <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+        </form>
+      </div>
+    </div>
 
-    </nav>
+  </nav>
 </header>
 
-<main class="d-flex vh-100">
-    <div class="d-flex flex-column container justify-content-center align-items-center ">
+<main class="px-3 text-center align-items-center vh-100 ">
+  <div class="d-flex flex-column container justify-content-center align-items-center ">
 
-        <section class="mb-5">
-            <div class="row d-flex text-center justify-content-center align-items-center">
-                <h1>Cover your page.</h1>
-                <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download,
-                    edit
-                    the
-                    text, and add your own fullscreen background photo to make it your own.</p>
-                <p class="lead">
-                    <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-dark">Learn more</a>
-                </p>
-            </div>
-        </section>
+    <section class="mb-5">
+      <div class="row d-flex text-center justify-content-center align-items-center">
+        <h1>Cover your page.</h1>
+        <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download,
+          edit
+          the
+          text, and add your own fullscreen background photo to make it your own.</p>
+        <p class="lead">
+          <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-dark">Learn more</a>
+        </p>
+      </div>
+    </section>
 
-        <section class="pt-6">
-            <h2 class="text-left">Login</h2>
-            <form action="pages/profile/">
-                <div class="form-group">
-                    <label class="text-left" for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                           placeholder="Enter email" required>
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                        else.</small>
-                </div>
-                <div class="form-group">
-                    <label class="text-left" for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"
-                           pattern=".{8,}" required>
-                </div>
-                <div class="form-group form-check">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </section>
+    <section class="pt-6">
+      <h2 class="text-left">Login</h2>
+      <form action="pages/profile/">
+        <div class="form-group">
+          <label class="text-left" for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                 placeholder="Enter email" required>
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+            else.</small>
+        </div>
+        <div class="form-group">
+          <label class="text-left" for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"
+                 pattern=".{8,}" required>
+        </div>
+        <div class="form-group form-check">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </section>
 
-    </div>
+  </div>
 </main>
 
 
-<footer class="footer mt-auto py-3">
-    <div class="container d-flex flex-column ">
-        <div class="row flex-column d-flex flex-sm-row flex-md-row flex-lg-row text-center">
-            <div class="col-6 col-md-2 mb-3 col-sm-3 d-flex flex-column">
-                <h5>Section</h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-                </ul>
-            </div>
+<footer class="footer  mt-auto py-3">
+  <div class="container d-flex flex-column ">
+    <div class="row flex-column d-flex flex-sm-row flex-md-row flex-lg-row text-center">
+      <div class="col-6 col-md-2 mb-3 col-sm-3 d-flex flex-column">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+      </div>
 
-            <div class="col-6 col-md-2 mb-3 col-sm-3 d-flex flex-column">
-                <h5>Section</h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-                </ul>
-            </div>
+      <div class="col-6 col-md-2 mb-3 col-sm-3 d-flex flex-column">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+      </div>
 
-            <div class="col-6 col-md-2 mb-3 col-sm-3 d-flex flex-column">
-                <h5>Section</h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-                </ul>
-            </div>
+      <div class="col-6 col-md-2 mb-3 col-sm-3 d-flex flex-column">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+      </div>
 
-            <div class="col-md-5 offset-md-1 mb-3">
-                <form>
-                    <h5>Subscribe to our newsletter</h5>
-                    <p>Monthly digest of what's new and exciting from us.</p>
-                    <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                        <label for="newsletter1" class="visually-hidden">Email address</label>
-                        <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-                        <button class="btn btn-primary" type="button">Subscribe</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-            <p>&copy; 2022 Company, Inc. All rights reserved.</p>
-            <ul class="list-unstyled d-flex">
-                <li class="ms-3"><a class="link-dark" href="#">
-                    <svg class="bi text-light" width="24" height="24">
-                        <use xlink:href="#twitter"/>
-                    </svg>
-                </a></li>
-                <li class="ms-3"><a class="link-dark" href="#">
-                    <svg class="bi text-light" width="24" height="24">
-                        <use xlink:href="#instagram"/>
-                    </svg>
-                </a></li>
-                <li class="ms-3"><a class="link-dark" href="#">
-                    <svg class="bi text-light" width="24" height="24">
-                        <use xlink:href="#facebook"/>
-                    </svg>
-                </a></li>
-            </ul>
-        </div>
+      <div class="col-md-5 offset-md-1 mb-3">
+        <form>
+          <h5>Subscribe to our newsletter</h5>
+          <p>Monthly digest of what's new and exciting from us.</p>
+          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+            <label for="newsletter1" class="visually-hidden">Email address</label>
+            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+            <button class="btn btn-primary" type="button">Subscribe</button>
+          </div>
+        </form>
+      </div>
     </div>
+
+    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+      <p>&copy; 2022 Company, Inc. All rights reserved.</p>
+      <ul class="list-unstyled d-flex">
+        <li class="ms-3"><a class="link-dark" href="#">
+          <svg class="bi text-light" width="24" height="24">
+            <use xlink:href="#twitter" />
+          </svg>
+        </a></li>
+        <li class="ms-3"><a class="link-dark" href="#">
+          <svg class="bi text-light" width="24" height="24">
+            <use xlink:href="#instagram" />
+          </svg>
+        </a></li>
+        <li class="ms-3"><a class="link-dark" href="#">
+          <svg class="bi text-light" width="24" height="24">
+            <use xlink:href="#facebook" />
+          </svg>
+        </a></li>
+      </ul>
+    </div>
+  </div>
 </footer>
+
 
 <script type="module" src="/src/assets/js/main.js"></script>
 </body>
