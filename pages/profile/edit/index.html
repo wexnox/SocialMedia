@@ -7,7 +7,79 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 </head>
-<body>
+<body class="text-bg-dark h-100">
 
+
+<header class="sticky-top ">
+  <nav class="navbar navbar-expand-lg navbar-dark ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Social Network</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/feed/index.html">Feed</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+               aria-expanded="false">
+              Username
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/pages/profile/index.html">View Profile</a></li>
+              <li><a class="dropdown-item" href="/pages/profile/edit/index.html">Edit Profile</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Logout</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/profile/login/index.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/profile/register/index.html">Register</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+
+  </nav>
+</header>
+
+
+
+<main class="d-flex flex-column container vh-100">
+  <section>
+    <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+      <div class="col-md-6 px-0">
+        <h1 class="display-4 fst-italic">Edit Profile</h1>
+        <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and
+          efficiently about what’s most interesting in this post’s contents.</p>
+        <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p>
+      </div>
+    </div>
+  </section>
+
+
+</main>
+
+
+
+
+
+
+<script src="/src/assets/js/index.mjs" type="module"></script>
 </body>
 </html>

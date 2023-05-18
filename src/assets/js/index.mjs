@@ -1,8 +1,4 @@
-// Import our custom CSS
-import '/src/assets/scss/styles.scss'
+import './bootstrap.mjs'
+import router from  "./router.mjs";
 
-// Import all of Bootstrap's CSS
-import '/src/assets/scss/index.scss'
-
-// Import all of Bootstrap's JS
-import 'bootstrap'
+router();

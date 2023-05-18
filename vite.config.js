@@ -24,6 +24,8 @@ export default defineConfig({
                 main: resolve(__dirname, 'index.html'),
                 feed: resolve(__dirname, 'pages/feed/index.html'),
                 profile: resolve(__dirname, 'pages/profile/index.html'),
+                login: resolve(__dirname, 'pages/profile/login/index.html'),
+                register: resolve(__dirname, 'pages/profile/register/index.html'),
             },
 
         },
