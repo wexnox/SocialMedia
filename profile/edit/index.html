@@ -66,22 +66,35 @@
 </header>
 
 
-<main class="d-flex flex-column container vh-100">
-  <section>
-    <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
-      <div class="col-md-6 px-0">
-        <h1 class="display-4 fst-italic">Edit Profile</h1>
-        <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and
-          efficiently about what’s most interesting in this post’s contents.</p>
-        <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p>
-      </div>
+  <main class="flex-grow-1 bg-dark text-light">
+    <div class="container-fluid">
+      
+      <form id="editProfile">
+        <div class="form-group mb-3">
+          <label for="">Name</label>
+          <input class="form-control" type="text" disabled name="name">
+        </div>
+
+        <div class="form-group mb-3">
+          <label for="">Email</label>
+          <input class="form-control" type="email" disabled name="email">
+        </div>
+
+        <div class="form-group mb-3">
+          <label for="">Banner</label>
+          <input class="form-control" type="url" name="banner">
+        </div>
+
+        <div class="form-group mb-3">
+          <label for="">Avatar</label>
+          <input class="form-control" type="url" name="avatar">
+        </div>
+
+        <button class="btn btn-success">Update Profile</button>
+      </form>
+
     </div>
-  </section>
-
-
-</main>
-
-
+  </main>
 
 
 
