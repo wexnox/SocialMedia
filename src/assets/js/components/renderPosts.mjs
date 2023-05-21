@@ -9,7 +9,7 @@ export function renderPosts(postsRendered) {
 
         <div class="row flex-md-row  border border-opacity-10 h-md-300 ">
 
-          <div class="d-flex justify-content-between"><a href="../pages/post.html?id=${post.id}" class="btn btn-primary">View Post Details!</a></div>
+          <div class="d-flex justify-content-between"><a href="../post/index.html?id=${post.id}" class="btn btn-primary">View Post Details!</a></div>
 
           <div class="col d-flex flex-column ">
             
