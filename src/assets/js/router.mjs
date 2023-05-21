@@ -1,5 +1,5 @@
 import * as listeners from "./handlers/index.mjs";
-// import * as postsMethod from "./api/posts/index.mjs";
+import * as postsMethod from "./api/posts/index.mjs";
 // import * as templets from "./templates/index.mjs";
 
 export default function router() {
@@ -22,9 +22,9 @@ export default function router() {
       listeners.setUpdateProfileListener();
       return;
 
-    // case "/posts/":
-    // postsMethod.fetchAllPosts();
-    // return;
+    case "/posts/":
+    postsMethod.fetchAllPosts();
+    return;
   }
 }
 
