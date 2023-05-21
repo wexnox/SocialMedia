@@ -23,8 +23,8 @@ export default function router() {
       return;
 
     // case "/posts/":
-      // postsMethod.fetchAllPosts();
-      // return;
+    // postsMethod.fetchAllPosts();
+    // return;
   }
 }
 
