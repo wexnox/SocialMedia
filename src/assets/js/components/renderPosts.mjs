@@ -4,7 +4,7 @@ export function renderPosts(postsRendered) {
     postContainer.innerHTML = "";
 
     postsRendered.forEach((post) => {
-      postContainer.innerHTML += `
+        postContainer.innerHTML += `
     <div class="col-md-8">
 
         <div class="row flex-md-row  border border-opacity-10 h-md-300 ">
@@ -14,7 +14,7 @@ export function renderPosts(postsRendered) {
           <div class="col d-flex flex-column ">
             
             <h1 class="">${post.title}</h1>
-            <h2 class="">${post.author.name}></h2>
+            <h2 class="">${post.author.name}</h2>
             <p class="text-light">Created:${post.created}</p>
             <p class=" ">${post.body}</p>
             <div class="media">
@@ -27,4 +27,4 @@ export function renderPosts(postsRendered) {
 `;
     });
 
-};
+}

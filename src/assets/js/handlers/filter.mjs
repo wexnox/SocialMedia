@@ -1,0 +1,15 @@
+import  { API_SOCIAL_URL} from "../api/constants.mjs";
+import {authFetch} from "../api/authFetch.mjs";
+import { renderPosts} from "../components/renderPosts.mjs";
+
+
+export async function asceFilter(){
+    const container = document.querySelector("#postContainer");
+
+}
+
+
+export async function descFilter() {
+    const container = document.querySelector("#postContainer");
+
+}
