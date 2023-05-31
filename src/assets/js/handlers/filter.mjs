@@ -3,6 +3,10 @@ import {authFetch} from "../api/authFetch.mjs";
 import {renderPosts} from "../components/renderPosts.mjs";
 
 
+/**
+ *
+ * @returns {Promise<void>}
+ */
 export async function asceFilter() {
     const container = document.querySelector("#postsContainer");
     const ascendingFilter = document.querySelector("#asceFilter");
@@ -25,6 +29,10 @@ export async function asceFilter() {
 }
 
 
+/**
+ *
+ * @returns {Promise<void>}
+ */
 export async function descFilter() {
     const container = document.querySelector("#postsContainer");
     const decendingFilter = document.querySelector("#descFilter");

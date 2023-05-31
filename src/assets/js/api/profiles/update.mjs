@@ -2,9 +2,23 @@ import { API_SOCIAL_URL } from "../constants.mjs";
 
 import { authFetch } from "../authFetch.mjs"
 
+/**
+ *
+ * @type {string}
+ */
 const action = "/profiles";
+
+/**
+ *
+ * @type {string}
+ */
 const method = "put";
 
+/**
+ *
+ * @param profileData
+ * @returns {Promise<any>}
+ */
 export async function updateProfile(profileData) {
   if (!profileData.name) {
     throw new Error("Update requires a name");

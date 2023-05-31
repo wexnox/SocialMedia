@@ -2,6 +2,10 @@ import { getProfile, updateProfile } from "../api/profiles/index.mjs";
 
 import { load } from "../storage/index.mjs";
 
+/**
+ *
+ * @returns {Promise<void>}
+ */
 export async function setUpdateProfileListener() {
   const form = document.querySelector("#editProfile");
 

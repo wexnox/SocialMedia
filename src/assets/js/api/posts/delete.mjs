@@ -2,9 +2,22 @@ import { API_SOCIAL_URL } from "../constants.mjs";
 
 import { authFetch } from "../authFetch.mjs"
 
+/**
+ *
+ * @type {string}
+ */
 const action = "/posts";
+/**
+ *
+ * @type {string}
+ */
 const method = "delete";
 
+/**
+ *
+ * @param id
+ * @returns {Promise<any>}
+ */
 export async function removePost(id) {
   if (!id) {
     throw new Error("Delete requires a postID");

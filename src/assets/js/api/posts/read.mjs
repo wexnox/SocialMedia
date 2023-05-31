@@ -2,6 +2,10 @@ import { API_SOCIAL_URL } from "../constants.mjs";
 
 import { authFetch } from "../authFetch.mjs";
 
+/**
+ *
+ * @type {string}
+ */
 const action = "/posts";
 
 export async function getPosts() {
@@ -12,6 +16,11 @@ export async function getPosts() {
   return await response.json();
 }
 
+/**
+ *
+ * @param id
+ * @returns {Promise<any>}
+ */
 export async function getPost(id) {
   if (!id) {
     throw new Error("Get requires a postID");

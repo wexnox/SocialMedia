@@ -1,9 +1,22 @@
 import { API_SOCIAL_URL } from "../constants.mjs";
 import * as storage from "../../storage/index.mjs";
 
+/**
+ *
+ * @type {string}
+ */
 const action = "/auth/login";
+/**
+ *
+ * @type {string}
+ */
 const method = "post";
 
+/**
+ *
+ * @param profile
+ * @returns {Promise<void>}
+ */
 export async function login(profile) {
   const loginURL = API_SOCIAL_URL + action;
   const body = JSON.stringify(profile);

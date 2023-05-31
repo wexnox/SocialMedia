@@ -2,9 +2,22 @@ import { API_SOCIAL_URL } from "../constants.mjs";
 
 import { authFetch } from "../authFetch.mjs"
 
+/**
+ *
+ * @type {string}
+ */
 const action = "/posts";
+/**
+ *
+ * @type {string}
+ */
 const method = "put";
 
+/**
+ *
+ * @param postData
+ * @returns {Promise<any>}
+ */
 export async function updatePost(postData) {
 
   if (!postData.id) {
