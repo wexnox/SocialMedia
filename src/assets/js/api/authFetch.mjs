@@ -1,8 +1,9 @@
 import { load } from "../storage/index.mjs";
 
 /**
- *
- * @returns {{Authorization: string, "Content-Type": string}}
+ *  the authentication header and token
+ * @param {string} token - Authentication token stored in localstorage
+ * @returns {{Authorization: string, "Content-Type": string}} - Returns bearer token
  */
 export function headers() {
   const token = load("token");
@@ -14,7 +15,7 @@ export function headers() {
 }
 
 /**
- *
+ * Contains the required info for auth header
  * @param url
  * @param options
  * @returns {Promise<Response>}
