@@ -23,7 +23,7 @@ You have been tasked with producing a new JavaScript front-end client for an exi
 
 Using the provided API and API documentation, create a functioning user interface that allows for **viewing, posting, editing and deleting** social media content.
 
-Social API routes require authorisation via JWT (JSON Web Tokens). You will need to register an account and login to access your token.
+Social API routes require authorisation via JWT (JSON Web Tokens). You will need to registerHandler an account and login to access your token.
 
 To complete the required features, you will also need to make use of `GET`, `POST`, `PUT`, and `DELETE`HTTP methods.
 
@@ -35,7 +35,7 @@ A finished project fulfils the requirements below with an easy to use and error-
 
 The following user stories are required for a passing submission:
 
-- User with `@noroff.no` or `@stud.noroff.no` email can register profile
+- User with `@noroff.no` or `@stud.noroff.no` email can registerHandler profile
 - Registered user can login
 - User can view a post content feed
 - User can filter the post content feed
