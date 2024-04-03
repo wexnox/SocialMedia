@@ -6,52 +6,64 @@ import { redirectBasedOnLogin } from "./helpers/redirectBasedOnLogin.js";
 function handleRootIndex() {
 
 }
+
 function handleAuthRegister() {
-    listeners.setRegisterFormListener();
+  listeners.setRegisterFormListener();
 }
+
 function handleAuthLogin() {
-    listeners.setLoginFormListener();
+  listeners.setLoginFormListener();
+}
+
+function handlePostFeed() {
+  //     listeners.fetchAllPosts();
+  // listeners.feed; TODO
+}
+
+function handlePostDetails() {
+  // listeners.post(); TODO
+}
+
+function handleCreateNewPost() {
+  listeners.setCreatePostFormListener();
+}
+
+function handleEditPost() {
+  listeners.setUpdatePostListener();
 }
 
 export default function router() {
-    const pathname = location.pathname;
-    redirectBasedOnLogin(pathname);
-    buildMenu(pathname);
+  const pathname = location.pathname;
+  redirectBasedOnLogin(pathname);
+  buildMenu(pathname);
 
-    switch (pathname) {
-        case '/':
-        case '/login.html':
-            handleRootIndex();
-            break
+  switch (pathname) {
+    case "/":
+    case "/login.html":
+      handleRootIndex();
+      break;
 
-        case "/profile/login/":
-            handleAuthLogin()
-            return;
-        case "/profile/registerHandler/":
-            handleAuthRegister()
-            return;
-
-        // case "/profile/edit/":
-        //     listeners.setUpdateProfileListener();
-        //     return;
-        //
-        //
-        //
-        // case "/posts/":
-        //     listeners.fetchAllPosts();
-        //     return;
-        // case "/post/login.html":
-        //     post.getPostDetails()
-        //     return;
-        // case "/post/create/":
-        //     listeners.setCreatePostFormListener();
-        //     return;
-        // case "/post/edit/":
-        //     listeners.setUpdatePostListener();
-        //     return;
+    case "/profile/login/":
+      handleAuthLogin();
+      return;
+    case "/profile/registerHandler/":
+      handleAuthRegister();
+      return;
+    // Feed
+    case "/posts":
+    case "/posts/index.html":
+      handlePostFeed();
+      break;
+    case "/posts/post.html":
+      handlePostDetails();
+      break;
+    case "/posts/create.html":
+      handleCreateNewPost();
+      break;
+    case "/posts/edit.html":
+      handleEditPost();
+      break;
 
 
-
-
-    }
+  }
 }
