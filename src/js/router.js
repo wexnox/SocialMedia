@@ -16,8 +16,7 @@ function handleAuthLogin() {
 }
 
 function handlePostFeed() {
-  //     listeners.fetchAllPosts();
-  // listeners.feed; TODO
+      listeners.fetchAllPosts();
 }
 
 function handlePostDetails() {
