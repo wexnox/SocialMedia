@@ -1,5 +1,8 @@
+// CRUD
 export * from "./createPostHandler.js";
-export * from "./read.mjs";
-export * from "./updatePostHandler.js";
+export * from "./getPostDetailsHandler.js"
 export * from "./deletePostByIDHandler.js";
-export * from "./posts.mjs";
+export * from "./updatePostHandler.js";
+
+// Fetch all posts
+export * from "./fetchAllPostsHandler.js";
