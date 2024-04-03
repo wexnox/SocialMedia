@@ -1,36 +1,26 @@
-import { getProfile, updateProfile } from "../../api/profiles/index.mjs";
-import { load } from "../../storage/index.js";
-
+import { getProfile, updateProfileHandler } from "../../api/profiles/index.mjs";
+import { getTokenFromStorage } from "../../storage/index.js";
 
 export async function setUpdateProfileListener() {
   const form = document.querySelector("#editProfile");
 
   if (form) {
-    const { name, email } = load("profile")
+    const { name, email } = getTokenFromStorage("profile")
     form.name.value = name;
     form.email.value = email;
 
-    const button = form.querySelector("button");
-    button.disabled = true;
-
     const profile = await getProfile(name);
-
     form.banner.value = profile.banner;
     form.avatar.value = profile.avatar;
 
-    button.disabled = false;
-
     form.addEventListener("submit", (event) => {
       event.preventDefault()
-      const form = event.target;
-      const formData = new FormData(form);
-      const profile = Object.fromEntries(formData.entries())
+      const profileData = {
+        ...Object.fromEntries(new FormData(event.target).entries()), name, email
+      };
 
-      profile.name = name;
-      profile.email = email;
 
-      // Send it to the API
-      updateProfile(profile)
+      updateProfileHandler(profileData)
     })
   }
 }
