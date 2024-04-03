@@ -5,7 +5,7 @@ import { renderPosts} from "../../components/renderPosts.mjs";
 import { asceFilter, descFilter} from "../../listeners/index.js";
 
 
-export async function fetchAllPosts(getPostUrl) {
+export async function fetchAllPostsHandler(getPostUrl) {
   const url = `${API_SOCIAL_URL}/posts/?sort=created&sortOrder=desc&_author=true&_reactions=true&_comments=true`;
 
   const method = "GET";
