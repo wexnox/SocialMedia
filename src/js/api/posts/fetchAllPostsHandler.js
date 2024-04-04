@@ -1,5 +1,5 @@
 import { API_SOCIAL_URL } from "../constants.mjs";
-import { renderPosts} from "../../components/renderPosts.mjs";
+import { renderPosts } from "../../components/renderPosts.mjs";
 import { headers } from "@/js/api/headers.js";
 // import { search} from "../../components/search.mjs"
 // import { asceFilter, descFilter} from "../../listeners/index.js";
@@ -11,7 +11,11 @@ export async function fetchAllPostsHandler(getPostUrl) {
   const method = "GET";
 
   try {
-    const response = headers(url, method);
+    const response = await fetch(url,
+      {
+        method: method,
+        headers: headers
+      });
     const posts = await response.json(getPostUrl);
     // console.log(posts);
     renderPosts(posts);
@@ -24,3 +28,4 @@ export async function fetchAllPostsHandler(getPostUrl) {
 }
 
 
+fetchAllPostsHandler();

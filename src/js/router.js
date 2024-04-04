@@ -1,6 +1,7 @@
 import * as listeners from "./listeners/index.js";
 import buildMenu from "./ui/common/buildMenu.js";
 import { redirectBasedOnLogin } from "./helpers/redirectBasedOnLogin.js";
+import { showFeed } from "@/js/ui/posts/showFeed.js";
 
 
 function handleRootIndex() {
@@ -16,7 +17,7 @@ function handleAuthLogin() {
 }
 
 function handlePostFeed() {
-      listeners.fetchAllPosts();
+      showFeed()
 }
 
 function handlePostDetails() {
@@ -48,6 +49,7 @@ export default function router() {
     case "/profile/registerHandler/":
       handleAuthRegister();
       return;
+
     // Feed
     case "/posts":
     case "/posts/index.html":
