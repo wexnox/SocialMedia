@@ -1,6 +1,8 @@
 export function displayAlertMessage(color, message) {
-  document.getElementById('message').innerHTML = `
-        <div class="alert alert-${color}" role="alert">
-            ${message}
-        </div>`;
+  const messageElement = document.getElementById('message');
+  if (messageElement) {
+    messageElement.innerHTML = `<div class="alert alert-${color}" role="alert">${message}</div>`;
+  } else {
+    console.error("Unable to display message: Element with ID 'message' not found.");
+  }
 }
