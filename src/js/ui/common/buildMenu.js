@@ -46,7 +46,7 @@ export default function buildMenu() {
   menuItems = menuItems.map(item => createMenuItem({...item, pathname})).join('');
 
   if (isAuthenticated) {
-    menuItems += `<li class="nav-item"><button class="btn btn-primary" id="logout">Log out</button></li>`;
+    menuItems += `<li class="nav-item"><button class="btn btn-primary" id="logoutButton">Log out</button></li>`;
   }
 
   menu.innerHTML = menuItems;
