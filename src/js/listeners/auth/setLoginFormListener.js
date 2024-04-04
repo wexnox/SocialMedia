@@ -1,4 +1,5 @@
 import { loginHandler } from "../../api/auth/index.js";
+import { displayAlertMessage } from "@/js/ui/common/displayMessage.js";
 
 export async function setLoginFormListener() {
 
@@ -19,8 +20,10 @@ export async function setLoginFormListener() {
 
         loginHandler(email, password)
 
-      } catch {
-        return alert("Either your username was not found or your password is incorrect");
+      } catch (error) {
+        console.error(error); // Log the error
+        displayAlertMessage('danger', error.message);
+        alert("Either your username was not found or your password is incorrect");
       }
     })
   }
