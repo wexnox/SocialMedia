@@ -63,15 +63,14 @@
 
             <div class="form-group mb-3">
               <div class="form-floating">
-                <input
-                  class="form-control"
-                  id="email"
-                  pattern="^[\w\-.]+@(stud.)?noroff.no$"
-                  placeholder="Email"
-                  required
-                  title="Only @(stud.)noroff.no domains are allowed to login."
-                  type="email"
-                />
+                <input class="form-control"
+                       id="email"
+                       name="email"
+                       pattern="^[\w\-.]+@(stud.)?noroff.no$"
+                       placeholder="Email"
+                       required
+                       title="Only @(stud.)noroff.no domains are allowed to login."
+                       type="email" />
                 <label for="email">Email</label>
                 <div class="invalid-feedback">Invalid Username</div>
               </div>
@@ -79,13 +78,14 @@
 
             <div class="form-group mb-3">
               <div class="form-floating">
-                <input
-                  class="form-control"
-                  id="password"
-                  minlength="8"
-                  placeholder="Password"
-                  required
-                  type="password"
+                <input class="form-control"
+                       id="password"
+                       name="password"
+                       type="password"
+                       minlength="8"
+                       placeholder="Password"
+                       required
+
                 />
                 <label for="password">Password</label>
                 <div class="invalid-feedback">Invalid Password</div>
