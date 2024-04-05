@@ -1,7 +1,7 @@
 import * as listeners from "./listeners/index.js";
 import buildMenu from "./ui/common/buildMenu.js";
 import { redirectBasedOnLogin } from "./helpers/redirectBasedOnLogin.js";
-
+import { showMyPosts } from "@/js/ui/posts/showFeed.js";
 
 
 function handleRootIndex() {
@@ -18,7 +18,7 @@ function handleAuthLogin() {
 
 // TODO disable to fix other error
 function handlePostFeed() {
-      // showFeed()
+      showMyPosts()
 }
 
 function handlePostDetails() {
@@ -36,6 +36,7 @@ function handleEditPost() {
 export default function router() {
   const pathname = location.pathname;
   console.log("Current Path:", pathname); // Log the current path
+
   redirectBasedOnLogin(pathname);
   buildMenu(pathname);
 
@@ -53,17 +54,17 @@ export default function router() {
       return;
 
     // Feed
-    case "/posts":
-    case "/posts/index.html":
+    case "/pages/posts":
+    case "/pages/posts/index.html":
       handlePostFeed();
       break;
-    case "/posts/post.html":
+    case "/pages/posts/post.html":
       handlePostDetails();
       break;
-    case "/posts/create.html":
+    case "/pages/posts/create.html":
       handleCreateNewPost();
       break;
-    case "/posts/edit.html":
+    case "/pages/posts/edit.html":
       handleEditPost();
       break;
 

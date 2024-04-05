@@ -5,26 +5,31 @@ export function renderPosts(postsRendered) {
 
     postsRendered.forEach((post) => {
         postContainer.innerHTML += `
-    <div class="col-md-8">
+        <div class="card mb-4 shadow-sm">
 
-        <div class="row flex-md-row  border border-opacity-10 h-md-300 ">
+            <div class="card-body">
 
-          <div class="d-flex justify-content-between"><a href="../post/index.html?id=${post.id}" class="btn btn-primary">View Post Details!</a></div>
+                <h2 class="card-title">${post.title}</h2>
 
-          <div class="col d-flex flex-column ">
-            
-            <h1 class="">${post.title}</h1>
-            <h2 class="">${post.author.name}</h2>
-            <p class="text-light">Created:${post.created}</p>
-            <p class=" ">${post.body}</p>
-            <div class="media">
-              <img alt="alt" class="mb-3 mw-100" role="img" src="${post.media}">
+                <div class="media mb-4">
+                  <img alt="alt" class="align-self-start mr-3" src="${post.media}">
+                  <div class="media-body">
+                    <p class="mt-0">${post.body}</p>
+                  </div>
+                </div>
+
+                <footer class="blockquote-footer">Created: <cite>${post.created}</cite></footer>
+                <span class="badge badge-dark">${post.tags}</span>
+
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                    <div class="btn-group">
+                        <a href="../post/index.html?id=${post.id}" class="btn btn-sm btn-outline-primary">View Post Details!</a>
+                    </div>
+                </div>
+                
             </div>
-            <div class="text-light">Tags: ${post.tags}</div>
-          </div>
-     
-   
-`;
+            
+        </div>
+        `;
     });
-
 }

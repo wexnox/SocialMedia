@@ -10,9 +10,10 @@ export function setCreatePostFormListener() {
 
       const form = event.target;
       const formData = new FormData(form);
-      const post = Object.fromEntries(formData.entries())
+      const postData = Object.fromEntries(formData.entries())
 
-      createPostHandler(post)
+
+      createPostHandler(postData)
     })
   }
 }

@@ -1,7 +1,7 @@
 import * as storage from "../storage/index.js";
 
 export const headers = (contentType) => {
-  const token = storage.getTokenFromStorage("token");
+  const token = storage.getTokenFromStorage("accessToken");
   const headers = {};
 
   if (contentType) {

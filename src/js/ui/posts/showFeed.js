@@ -1,6 +1,7 @@
-import { fetchAllPostsHandler } from "@/js/api/posts/fetchAllPostsHandler.js";
+import { fetchUsersPostsHandler } from "@/js/api/posts/fetchUsersPostsHandler.js";
 
-export function showFeed(){
+export function showMyPosts(){
 
-  fetchAllPostsHandler()
+
+  fetchUsersPostsHandler()
 }

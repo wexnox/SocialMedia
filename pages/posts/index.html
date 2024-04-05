@@ -11,12 +11,21 @@
 </head>
 <body class="text-bg-dark">
 <header class="sticky-top">
+
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="/">
         <img alt="logo" class="d-inline-block align-text-top" src="/images/favicon.webp" width="50" />
       </a>
-      <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+      <button
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        class="navbar-toggler"
+        data-bs-target="#navbarNav"
+        data-bs-toggle="collapse"
+        type="button"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -24,25 +33,31 @@
       </div>
     </div>
     <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-      <input aria-label="Search" class="form-control form-control-dark" id="searchBar" name="searchBar" placeholder="Search..." type="search" />
+      <input
+        aria-label="Search"
+        class="form-control form-control-dark"
+        id="searchBar"
+        name="searchBar"
+        placeholder="Search..."
+        type="search"
+      />
     </form>
   </nav>
 </header>
 
 <main>
-
   <div class="container mt-5 mb-5">
     <div id="message"></div>
-
     <div class="row justify-content-center">
-      <h1>Posts</h1>
-      <a class="btn btn-primary" href="index.html"> Create new post</a>
-      <div class="col-8 col-md-6" id="postsContainer"></div>
-
+      <div class="col-12 text-center mb-4">
+        <h1>Posts</h1>
+      </div>
+      <div class="col-12 d-flex justify-content-center mb-4">
+        <a class="btn btn-primary" href="create.html">Create new post</a>
+      </div>
+      <div class="col-12 col-md-8" id="postsContainer"></div>
     </div>
-
   </div>
-
 </main>
 
 <footer class="bg-dark text-light pt-5 pb-4">
