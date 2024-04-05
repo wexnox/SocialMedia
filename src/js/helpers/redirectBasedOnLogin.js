@@ -2,9 +2,9 @@
 export function redirectBasedOnLogin(pathname) {
     const accessToken = localStorage.getItem('accessToken');
     if (accessToken) {
-        redirectToURL(pathname, ["/auth/profile.html", "/auth/registerHandler.html"], "/profile");
+        redirectToURL(pathname, ["/auth/profile.html", "/auth/register.html"], "/profile");
     } else {
-        redirectToURL(pathname, ["/profile/", "/profile/details.html"], "/auth/profile.html");
+        redirectToURL(pathname, ["/pages/profile/", "/pages/profile/index.html"], "/auth/register.html");
     }
 }
 
