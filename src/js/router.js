@@ -4,6 +4,7 @@ import { redirectBasedOnLogin } from "./helpers/redirectBasedOnLogin.js";
 import { showMyPosts } from "@/js/ui/posts/showFeed.js";
 
 
+
 function handleRootIndex() {
 
 }
@@ -16,13 +17,13 @@ function handleAuthLogin() {
   listeners.setLoginFormListener();
 }
 
-// TODO disable to fix other error
 function handlePostFeed() {
       showMyPosts()
 }
 
 function handlePostDetails() {
-  // listeners.post(); TODO
+  listeners.showPostDetails()
+listeners.setPageEventListeners();
 }
 
 function handleCreateNewPost() {
@@ -58,7 +59,7 @@ export default function router() {
     case "/pages/posts/index.html":
       handlePostFeed();
       break;
-    case "/pages/posts/post.html":
+    case "/pages/posts/postDetails.html":
       handlePostDetails();
       break;
     case "/pages/posts/create.html":

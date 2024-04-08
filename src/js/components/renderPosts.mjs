@@ -23,7 +23,7 @@ export function renderPosts(postsRendered) {
 
                 <div class="d-flex justify-content-between align-items-center mt-2">
                     <div class="btn-group">
-                        <a href="../post/index.html?id=${post.id}" class="btn btn-sm btn-outline-primary">View Post Details!</a>
+                        <a href="./postDetails.html?id=${post.id}" class="btn btn-sm btn-outline-primary">View Post Details!</a>
                     </div>
                 </div>
                 

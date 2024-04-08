@@ -1,4 +1,4 @@
-import { updatePostHandler} from "../../api/posts/index.mjs";
+import { getPostDetailsHandler, updatePostHandler } from "../../api/posts/index.mjs";
 
 export async function setUpdatePostListener() {
     const form = document.querySelector("#editPost");
@@ -8,14 +8,20 @@ export async function setUpdatePostListener() {
 
     if (form) {
 
+        const post = await getPostDetailsHandler(id);
+        form.title.value = post.title;
+        form.body.value = post.body;
+        form.tags.value = post.tags.join(', ');
+        form.media.value = post.media;
+
         form.addEventListener("submit", (event) => {
             event.preventDefault()
-            const form = event.target;
-            const formData = new FormData(form);
-            const post = Object.fromEntries(formData.entries())
-            post.id = id;
+            const postData = {
+                ...Object.fromEntries(new FormData(event.target).entries()),
+                tags: event.target.tags.value.split(', ').map(tag => tag.trim())
+            };
 
-            updatePostHandler(post)
-        })
+            updatePostHandler(event, postData, id)
+        });
     }
 }
