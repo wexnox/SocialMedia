@@ -1,31 +1,38 @@
-import { API_SOCIAL_URL } from "../constants.mjs";
+import { apiPath } from "../constants.mjs";
 import { headers } from "../headers.js"
-const action = "/posts";
+import { displayAlertMessage } from "@/js/ui/common/displayMessage.js";
 
 
 
-export async function updatePostHandler(event, post, id) {
+
+export async function updatePostHandler(event, postData, id) {
   event.preventDefault();
 
-  const url = `${API_SOCIAL_URL}${action}/${id}`;
-
   try {
+    const url = apiPath + "/posts/" + id;
     const response = await fetch(url, {
       method: 'PUT',
       headers: headers('application/json'),
-      body: JSON.stringify({
-        title: post.title,
-        body: post.body,
-        tags: post.tags,
-        media: post.media
-      })
+      body: JSON.stringify(postData)
     });
     if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+      throw Error(response.status);
     }
-    const result = await response.json();
-    console.log(result);
+    const data = await response.json();
+    console.log("Post updated successfully", JSON.stringify(data, null, 2));
+
+    // Display a success alert message.
+    displayAlertMessage('success', 'Post updated successfully!');
+
+    // Delayed redirect
+    setTimeout(() => {
+    window.location.href = "/pages/posts/postDetails.html?id=" + id;
+  }, 5000); // 5000ms delay, adjust as needed
   } catch (error) {
+
     console.error('Error updating post details:', error);
+
+    displayAlertMessage('danger', `Error updating post: ${error}`);
+
   }
 };
