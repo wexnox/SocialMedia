@@ -1,37 +1,71 @@
 export function renderDetailsPost(result, postContainer) {
-  const tagList = result.tags.map(tag => `<li>${tag}</li>`).join('');
-  let authorName = result.author ? result.author.name : '';
-  let authorEmail = result.author ? result.author.email : '';
-  postContainer.innerHTML += `
-        <div class="card-head ">
-            <h1>Title: ${result.title}</h1>
-            <h2>Created by: ${authorName}</h2>
-            <h3>Email: ${authorEmail}</h3>
-            <h4>Created at: ${result.created}</h4>
-            <h4>Updated at: ${result.updated}</h4>
-            <h4>Tags:</h4>
-            <ul>${tagList}</ul>
-        </div>
-        <div class="card-body">
-            ${result.body}
-        </div>
+
+  const authorDetails = ({name, email}={}) => ({name: name || '', email: email || ''});
+  const {name: authorName, email: authorEmail} = authorDetails(result.author);
+
+  // More robust check for the existence of result._count
+  const _count = result._count || {reactions: 0, comments: 0};
+
+  // Create DOM elements
+  const post = document.createElement('div');
+  post.innerHTML = `
+    <h1>Title: ${result.title}</h1>
+    <h2>Created by: ${authorName}</h2>
+    <h3>Email: ${authorEmail}</h3>
+    <h4>Created at: ${result.created}</h4>
+    <h4>Updated at: ${result.updated}</h4>
+    <h4>Tags:</h4>
     `;
+
+  const tagList = document.createElement('ul');
+  result.tags.forEach(tag => {
+    const tagItem = document.createElement('li');
+    tagItem.textContent = tag;
+    tagList.append(tagItem);
+  });
+
+  post.append(tagList);
+
+  const postBody = document.createElement('div');
+  postBody.innerHTML = `${result.body}`;
+
+  post.append(postBody);
+
+  // Handle optional elements: media, reactions, comments
   if (result.media) {
-    postContainer.innerHTML += `<img src="${result.media}" alt="Post media">`;
+    const postMedia = document.createElement("img");
+    postMedia.src = result.media;
+    postMedia.alt = "Post media";
+    post.append(postMedia);
   }
+
+
   if (result.reactions && result.reactions.length > 0) {
-    let reactionsHTML = result.reactions.map(reaction => `<li>${reaction.symbol} ${reaction.count}</li>`).join('');
-    postContainer.innerHTML += `
-            <h4>Reactions:</h4>
-            <ul>${reactionsHTML}</ul>
-        `;
+    const reactions = document.createElement("ul");
+    result.reactions.forEach(reaction => {
+      const reactionItem = document.createElement("li");
+      reactionItem.textContent = `${reaction.symbol} ${reaction.count}`;
+      reactions.append(reactionItem);
+    });
+    post.append(document.createElement("h4").textContent = `Reactions:`);
+    post.append(reactions);
   }
+
   if (result.comments && result.comments.length > 0) {
-    let commentsHTML = result.comments.map(comment => `<li>${comment.body} by ${comment.author.name}</li>`).join('');
-    postContainer.innerHTML += `
-            <h4>Comments:</h4>
-            <ul>${commentsHTML}</ul>
-        `;
+    const comments = document.createElement("ul");
+    result.comments.forEach(comment => {
+      const commentItem = document.createElement("li");
+      commentItem.textContent = `${comment.body} by ${comment.author.name}`;
+      comments.append(commentItem);
+    });
+    post.append(document.createElement("h4").textContent = `Comments:`);
+    post.append(comments);
+
   }
-  postContainer.innerHTML += `<h4>Reaction count: ${result._count.reactions}, Comment count: ${result._count.comments}</h4>`;
+
+  const postCount = document.createElement("h4");
+  postCount.textContent = `Reaction count: ${_count.reactions}, Comment count: ${_count.comments}`;
+  post.append(postCount);
+
+  postContainer.append(post);
 }
