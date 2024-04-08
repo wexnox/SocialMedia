@@ -2,6 +2,8 @@ import * as listeners from "./listeners/index.js";
 import buildMenu from "./ui/common/buildMenu.js";
 import { redirectBasedOnLogin } from "./helpers/redirectBasedOnLogin.js";
 import { showMyPosts } from "@/js/ui/posts/showFeed.js";
+// import { populateEditForm } from "@/js/listeners/posts/populateEditForm.js";
+
 
 
 
@@ -18,12 +20,12 @@ function handleAuthLogin() {
 }
 
 function handlePostFeed() {
-      showMyPosts()
+  showMyPosts();
 }
 
 function handlePostDetails() {
-  listeners.showPostDetails()
-listeners.setPageEventListeners();
+  listeners.showPostDetails();
+  listeners.setPageEventListeners();
 }
 
 function handleCreateNewPost() {
@@ -31,6 +33,7 @@ function handleCreateNewPost() {
 }
 
 function handleEditPost() {
+  // populateEditForm();
   listeners.setUpdatePostListener();
 }
 
