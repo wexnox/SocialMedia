@@ -37,13 +37,13 @@ The following user stories are required for a passing submission:
 
 1. [x] User with `@noroff.no` or `@stud.noroff.no` email can registerHandler profile
 2. [x] Registered user can login
-3. [ ] User can view a post content feed
-4. [ ] User can filter the post content feed
-5. [ ] User can search the post content feed
-6. [ ] User can view a post content item by ID
-7. [ ] User can create a post content item
-8. [ ] User can update a post content item
-9. [ ] User can delete a post content item
+3. [x] User can view a post content feed
+4. [x] User can filter the post content feed
+5. [x] User can searchPosts the post content feed
+6. [x] User can view a post content item by ID
+7. [x] User can create a post content item
+8. [x] User can update a post content item
+9. [x] User can delete a post content item
 
 ### Additional features
 
@@ -75,15 +75,15 @@ Commit regularly and use branches to prevent conflicts with your teammate as you
 
    Examples of detailed & accurate tasks:
 
-    - Create search form HTML
+    - Create searchPosts form HTML
     - Search form SCSS styling
     - Filter posts function
-    - Implement search event listener
+    - Implement searchPosts event listener
 4. Review the [API Guide](https://docs.noroff.dev/social-endpoints/authentication) and [API Documentation](https://api.noroff.dev/docs).
 5. Plan your approach, desired features and work strategy.
 6. Implement the required features as per your work plan.
 
-   > Note: All PRs should be made to js2, not to the default branch. For example, branch search-functionality should be created from, and merged into, branch js2.
+   > Note: All PRs should be made to js2, not to the default branch. For example, branch searchPosts-functionality should be created from, and merged into, branch js2.
 >
 7. Submit a link to your repository at the correct branch on the Moodle forum for peer review.
 8. Review 2 of your peers projects. (4 per team)
