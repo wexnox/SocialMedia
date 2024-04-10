@@ -17,8 +17,7 @@ export default defineConfig({
         index: path.resolve(__dirname, 'index.html'),
         login: path.resolve(__dirname, 'pages/auth/login.html'),
         register: path.resolve(__dirname, 'pages/auth/register.html'),
-        profile: path.resolve(__dirname, 'pages/profile/index.html'),
-        // searchPosts: resolve(__dirname, './src/searchPosts.html')
+
 
       },
     },
