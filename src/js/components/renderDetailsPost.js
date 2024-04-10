@@ -31,36 +31,44 @@ export function renderDetailsPost(result, postContainer) {
 
   post.append(postBody);
 
-  // Handle optional elements: media, reactions, comments
   if (result.media) {
     const postMedia = document.createElement("img");
     postMedia.src = result.media;
     postMedia.alt = "Post media";
-    post.append(postMedia);
+    postMedia.classList.add('img-fluid');
+
+    // Wrap image with a container, and set max-width for the container
+    const imageContainer = document.createElement("div");
+    imageContainer.style.maxWidth = "300px"; // Set this to the maximum size you want
+    imageContainer.style.maxHeight = "300px";
+    imageContainer.appendChild(postMedia);
+
+    post.append(imageContainer);
   }
 
 
+// handle reactions
   if (result.reactions && result.reactions.length > 0) {
-    const reactions = document.createElement("ul");
+    const reactions = document.createElement('ul');
     result.reactions.forEach(reaction => {
-      const reactionItem = document.createElement("li");
+      const reactionItem = document.createElement('li');
       reactionItem.textContent = `${reaction.symbol} ${reaction.count}`;
       reactions.append(reactionItem);
     });
-    post.append(document.createElement("h4").textContent = `Reactions:`);
+    post.append(document.createElement('h4').textContent = `Reactions:`);
     post.append(reactions);
   }
 
+// handle comments
   if (result.comments && result.comments.length > 0) {
-    const comments = document.createElement("ul");
+    const comments = document.createElement('ul');
     result.comments.forEach(comment => {
-      const commentItem = document.createElement("li");
+      const commentItem = document.createElement('li');
       commentItem.textContent = `${comment.body} by ${comment.author.name}`;
       comments.append(commentItem);
     });
-    post.append(document.createElement("h4").textContent = `Comments:`);
+    post.append(document.createElement('h4').textContent = `Comments:`);
     post.append(comments);
-
   }
 
   const postCount = document.createElement("h4");
