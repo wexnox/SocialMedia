@@ -10,12 +10,13 @@ export function renderPosts(postsRendered) {
     postsRendered.forEach((post) => {
         // Create the card div
         const cardDiv = document.createElement('div');
-        cardDiv.className = 'card mb-4 shadow-sm';
+        cardDiv.className = 'card mb-4 text-center shadow-sm';
 
         // Use innerHTML for the complex internal structure
         cardDiv.innerHTML = `
             <div class="card-body">
-                <h2 class="card-title">${post.title}</h2>
+                <h1 class="card-title">${post.title}</h1>
+                <p class="blockquote-footer pt-2">Written by: ${post.author.name}</p>
                 <div class="media mb-4">
                     <img alt="Post Image" class="align-self-start mr-3 img-fluid" src="${post.media}" style="max-width: 100%; height: auto;">
                     <div class="media-body">
@@ -24,7 +25,7 @@ export function renderPosts(postsRendered) {
                 </div>
                 <footer class="blockquote-footer">Created: <cite>${post.created}</cite></footer>
                 <span class="badge badge-dark">${post.tags}</span>
-                <div class="d-flex justify-content-between align-items-center mt-2">
+                <div class="mt-2">
                     <div class="btn-group">
                         <a href="/pages/posts/postDetails.html?id=${post.id}" class="btn btn-sm btn-outline-primary">View Post Details!</a>
                     </div>
