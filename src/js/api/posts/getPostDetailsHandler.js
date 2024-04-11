@@ -9,7 +9,7 @@ let postContainer;
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
-const url = apiPath + "/posts/" + id;
+const url = apiPath + "/posts/" + id + "?_author=true";
 
 if (id) {
   console.log("Post id:", id); // log the id
