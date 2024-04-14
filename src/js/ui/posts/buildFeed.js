@@ -11,20 +11,20 @@ let posts = [];
 
 
 export async function buildFeed() {
-  posts = await fetchAndSortPosts();
+  posts = await fetchAndSortPosts('desc');
   renderPosts(posts, postsContainer);
 }
 
 if (filterNewestBtn) {
   filterNewestBtn.addEventListener("click", async () => {
-    const sortedPosts = sortPostsLocally(posts, "asc");
+    const sortedPosts = sortPostsLocally(posts, "desc");
     renderPosts(sortedPosts, postsContainer);
   });
 }
 
 if (filterOldestBtn) {
   filterOldestBtn.addEventListener("click", async () => {
-    const sortedPosts = sortPostsLocally(posts, "desc");
+    const sortedPosts = sortPostsLocally(posts, "asc");
     renderPosts(sortedPosts, postsContainer);
   });
 

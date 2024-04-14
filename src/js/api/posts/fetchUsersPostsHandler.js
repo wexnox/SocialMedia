@@ -1,7 +1,7 @@
 import { apiPath } from "../constants.mjs";
-import { renderPosts } from "../../components/renderPosts.mjs";
 import { headers } from "@/js/api/headers.js";
 import { getTokenFromStorage } from "@/js/storage/index.js";
+import { renderPosts } from "@/js/components/renderPosts.mjs";
 
 export async function fetchUsersPostsHandler() {
   const token = getTokenFromStorage("accessToken");
@@ -17,7 +17,7 @@ export async function fetchUsersPostsHandler() {
   }
 
   const userPosts = `profiles/${profile.name}/posts`;
-  const url = `${apiPath}/${userPosts}`;
+  const url = `${apiPath}/${userPosts}` + "?_author=true";
   console.log(apiPath);
   console.log(url);
   console.log("Name: ", profile.name);

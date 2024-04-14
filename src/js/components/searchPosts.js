@@ -1,3 +1,11 @@
 export function searchPosts(posts, searchTerm) {
-    return posts.filter(post => post.title.toLowerCase().includes(searchTerm) || post.body.toLowerCase().includes(searchTerm));
+    searchTerm = searchTerm.toLowerCase();
+    return posts.filter(post => {
+        const title = post.title ? post.title.toLowerCase() : '';
+        const body = post.body ? post.body.toLowerCase() : '';
+        const authorName = post.author && post.author.name ? post.author.name.toLowerCase() : '';
+
+        return title.includes(searchTerm) || body.includes(searchTerm) || authorName.includes(searchTerm);
+    });
 }
+//TODO: need to update to search for tags

@@ -30,13 +30,13 @@ export default function buildMenu() {
 
   // Define the menu items for authenticated and unauthenticated states
   const authMenuItems = [
-    {currentPath: "/", path: "/", name: "Home"},
-    {currentPath: "/pages/profile/", path: "/pages/profile/index.html", name: "Profile"},
-    {currentPath: "/pages/posts/", path: "/pages/posts/index.html", name: "My Posts"}
+    { currentPath: "/", path: "/", name: "Home" },
+    { currentPath: "/pages/posts/create.html", path: "/pages/posts/create.html", name: "Create new post" },
+    { currentPath: "/pages/posts/", path: "/pages/posts/index.html", name: "My Posts" }
   ];
 
   const unauthMenuItems = [
-    {currentPath: "/", path: "/", name: "Home"},
+    { currentPath: "/", path: "/", name: "Home" },
     {currentPath: "/auth/login.html", path: "/auth/login.html", name: "Login"},
     {currentPath: "/auth/register.html", path: "/auth/register.html", name: "Register"}
   ];
