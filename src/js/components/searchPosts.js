@@ -8,3 +8,4 @@ export function searchPosts(posts, searchTerm) {
         return title.includes(searchTerm) || body.includes(searchTerm) || authorName.includes(searchTerm);
     });
 }
+//TODO: need to update to search for tags
