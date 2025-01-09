@@ -29,7 +29,6 @@ export default defineConfig({
         editPost: path.resolve(__dirname, 'pages/posts/edit.html'),
         listMyPosts: path.resolve(__dirname, 'pages/posts/index.html'),
         postDetails: path.resolve(__dirname, 'pages/posts/postDetails.html'),
-
       },
     },
   },
