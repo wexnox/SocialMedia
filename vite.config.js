@@ -24,6 +24,7 @@ export default defineConfig({
       input: {
         index: path.resolve(__dirname, 'index.html'),
         login: path.resolve(__dirname, 'auth/login.html'),
+        register: path.resolve(__dirname, 'auth/register.html'),
         createPost: path.resolve(__dirname, 'pages/posts/create.html'),
         editPost: path.resolve(__dirname, 'pages/posts/edit.html'),
         listMyPosts: path.resolve(__dirname, 'pages/posts/index.html'),
