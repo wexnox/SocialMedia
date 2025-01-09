@@ -4,13 +4,6 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 import {defineConfig} from "vite";
 export default defineConfig({
   // root: path.resolve(__dirname, 'src'),
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: `@import "bootstrap/scss/bootstrap";`
-      }
-    }
-  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
