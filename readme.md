@@ -18,6 +18,7 @@ This application serves as a front-end client for an existing social media platf
 - Design Application: [Figma](https://www.figma.com/)
 - Planning Application: [GitHub Projects](https://github.com/features/project-management/)
 
+[![Laravel Forge Site Deployment Status](https://img.shields.io/endpoint?url=https%3A%2F%2Fforge.laravel.com%2Fsite-badges%2Fa76166c9-75e9-4cd7-80c4-848204e68fba&style=plastic)](https://forge.laravel.com/servers/513382/sites/2580834)
 ## Getting Started
 
 To run the application locally:
