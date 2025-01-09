@@ -4,19 +4,19 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 import {defineConfig} from "vite";
 export default defineConfig({
   // root: path.resolve(__dirname, 'src'),
+  css: {
+    preprocessorOptions: {
+      scss: {
+
+      },
+    },
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
   },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        // Allow imports from node_modules without using '~'
-        additionalData: `@import "bootstrap/scss/bootstrap";`,
-      },
-    },
-  },
+
   build: {
     outDir: path.resolve(__dirname, './dist'),
     emptyOutDir: true,
