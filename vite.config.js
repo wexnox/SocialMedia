@@ -3,6 +3,7 @@ import {fileURLToPath} from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 import {defineConfig} from "vite";
 export default defineConfig({
+
   // root: path.resolve(__dirname, 'src'),
   css: {
     preprocessorOptions: {
@@ -19,7 +20,9 @@ export default defineConfig({
 
   build: {
     outDir: path.resolve(__dirname, './dist'),
+    sourcemap: true,
     emptyOutDir: true,
+    // assetsDir: 'assets',
     rollupOptions: {
       input: {
         index: path.resolve(__dirname, 'index.html'),
