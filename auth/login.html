@@ -2,15 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Social media</title>
-  <link href="images/favicon.webp" rel="icon" type="image/webp">
-  <script defer src="./src/js/index.js" type="module"></script>
+  <meta
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    name="viewport"
+  />
+  <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+  <title>Social media | Login</title>
 
+
+  <link href="../images/favicon.webp" rel="icon" type="image/webp">
+
+  <script defer src="/src/js/index.js" type="module"></script>
 </head>
 
 <body class="text-bg-dark">
-
 <header class="sticky-top">
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
@@ -46,20 +51,56 @@
 </header>
 
 <main>
+
   <div class="container mt-5 mb-5">
     <div id="message"></div>
-    <div class="row justify-content-center col-12">
-      <div class="text-center mb-4">
-        <h1>Welcome to Social Media Posts Feed</h1>
-      </div>
+    <div class="row justify-content-center">
+      <div class="card col-12 col-md-8 bg-dark">
+        <h1 class="card-header text-white text-center">Login Form</h1>
+        <div class="card-body">
 
-      <div class="justify-content-between m-auto d-flex pb-5">
-        <button class="btn btn-primary" id="asceFilter">Newest Post</button>
-        <button class="btn btn-primary" id="descFilter">Oldest Post</button>
+          <form id="loginForm">
+
+            <div class="form-group mb-3">
+              <div class="form-floating">
+                <input class="form-control"
+                       id="email"
+                       name="email"
+                       pattern="^[\w\-.]+@(stud.)?noroff.no$"
+                       placeholder="Email"
+                       required
+                       title="Only @(stud.)noroff.no domains are allowed to login."
+                       type="email" />
+                <label for="email">Email</label>
+                <div class="invalid-feedback">Invalid Username</div>
+              </div>
+            </div>
+
+            <div class="form-group mb-3">
+              <div class="form-floating">
+                <input class="form-control"
+                       id="password"
+                       name="password"
+                       type="password"
+                       minlength="8"
+                       placeholder="Password"
+                       required
+
+                />
+                <label for="password">Password</label>
+                <div class="invalid-feedback">Invalid Password</div>
+              </div>
+            </div>
+
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <button class="btn btn-success" name="create" type="submit">Sign up</button>
+            </div>
+          </form>
+        </div>
       </div>
-      <div class="" id="postsContainer"></div>
     </div>
   </div>
+
 </main>
 
 <footer class="bg-dark text-light pt-5 pb-4">

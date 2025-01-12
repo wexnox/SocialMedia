@@ -1,40 +1,39 @@
-// import {resolve} from 'path'
-import path, {resolve} from 'path'
-import eslint from 'vite-plugin-eslint';
-import {defineConfig} from 'vite';
-
+import * as path from 'path';
+import {fileURLToPath} from 'url';
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+import {defineConfig} from "vite";
 export default defineConfig({
-    plugins: [
-        { // default settings on build (i.e. fail on error)
-            ...eslint(),
-            apply: 'build',
-        },
-        { // do not fail on serve (i.e. local development)
-            ...eslint({
-                failOnWarning: false,
-                failOnError: false,
-            }),
-            apply: 'serve',
-            enforce: 'post'
-        },
-    ],
-    build: {
-        rollupOptions: {
-            input: {
-                main: resolve(__dirname, 'index.html'),
-                feed: resolve(__dirname, 'pages/feed/index.html'),
-                profile: resolve(__dirname, 'pages/profile/index.html'),
-            },
 
-        },
+  // root: path.resolve(__dirname, 'src'),
+  css: {
+    preprocessorOptions: {
+      scss: {
+
+      },
     },
-    server: {
-        hot: true
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
     },
-    resolve: {
-        alias: {
-            '~bootstrap': path.resolve(__dirname, 'node_modules/bootstrap'),
-        }
+  },
+
+  build: {
+    outDir: path.resolve(__dirname, './dist'),
+    sourcemap: true,
+    emptyOutDir: true,
+    // assetsDir: 'assets',
+    rollupOptions: {
+      input: {
+        index: path.resolve(__dirname, 'index.html'),
+        login: path.resolve(__dirname, 'auth/login.html'),
+        register: path.resolve(__dirname, 'auth/register.html'),
+        createPost: path.resolve(__dirname, 'pages/posts/create.html'),
+        editPost: path.resolve(__dirname, 'pages/posts/edit.html'),
+        listMyPosts: path.resolve(__dirname, 'pages/posts/index.html'),
+        postDetails: path.resolve(__dirname, 'pages/posts/postDetails.html'),
+      },
     },
+  },
 
 })
