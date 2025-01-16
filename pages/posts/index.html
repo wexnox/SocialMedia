@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Social media</title>
-  <link href="images/favicon.webp" rel="icon" type="image/webp">
-  <script defer src="./src/js/index.js" type="module"></script>
+  <title>Social Media | Posts</title>
+  <link href="/images/favicon.webp" rel="icon" type="image/webp">
 
+  <script defer src="/src/js/index.js" type="module"></script>
 </head>
-
-<body class="text-bg-dark">
-
+<body class="bg-dark">
 <header class="sticky-top">
+
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="/">
@@ -48,21 +48,20 @@
 <main>
   <div class="container mt-5 mb-5">
     <div id="message"></div>
-    <div class="row justify-content-center col-12">
-      <div class="text-center mb-4">
-        <h1>Welcome to Social Media Posts Feed</h1>
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-4">
+        <h1>Posts</h1>
       </div>
-
-      <div class="justify-content-between m-auto d-flex pb-5">
-        <button class="btn btn-primary" id="asceFilter">Newest Post</button>
-        <button class="btn btn-primary" id="descFilter">Oldest Post</button>
+      <div class="col-12 d-flex justify-content-center mb-4">
+        <a class="btn btn-primary" href="create.html">Create new post</a>
       </div>
-      <div class="" id="postsContainer"></div>
+      <div class="col-12 col-md-8" id="postsContainer"></div>
     </div>
   </div>
 </main>
 
 <footer class="bg-dark text-light pt-5 pb-4">
+
   <div class="container">
     <div class="row">
       <div class="col-md-3 col-sm-6 col-xs-12">
@@ -104,7 +103,5 @@
     </div>
   </div>
 </footer>
-
-
 </body>
 </html>
