@@ -15,8 +15,8 @@ export async function setLoginFormListener() {
       const password = formData.get("password");
 
       try {
-        console.log(email, password); // Add this line to debug
-        console.log(JSON.stringify(email, password));
+        // console.log(email, password); // Add this line to debug
+        // console.log(JSON.stringify(email, password));
 
         loginHandler(email, password)
 

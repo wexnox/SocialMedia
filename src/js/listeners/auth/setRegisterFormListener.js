@@ -18,8 +18,8 @@ export async function setRegisterFormListener() {
       const avatar = formData.get("avatar");
 
       try {
-        console.log(name, email, password);
-        console.log(JSON.stringify(name, email, password));
+        // console.log(name, email, password);
+        // console.log(JSON.stringify(name, email, password));
         await registerHandler(name, email, password, banner, avatar);
 
       } catch {
