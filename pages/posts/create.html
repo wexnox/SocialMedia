@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Social media | Create Post</title>
+
+  <link
+    crossorigin="anonymous"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+    rel="stylesheet"
+  />
+  <script
+    crossorigin="anonymous"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+  ></script>
+  <link href="#" rel="shortcut icon" />
+  <script defer src="/src/js/index.js" type="module"></script>
+</head>
+<body class="text-bg-dark">
+
+<header class="sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">
+        <img alt="logo" class="d-inline-block align-text-top" src="/images/favicon.webp" width="50" />
+      </a>
+      <button
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        class="navbar-toggler"
+        data-bs-target="#navbarNav"
+        data-bs-toggle="collapse"
+        type="button"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav" id="menu"></ul>
+      </div>
+    </div>
+    <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+      <input
+        aria-label="Search"
+        class="form-control form-control-dark"
+        id="searchBar"
+        name="searchBar"
+        placeholder="Search..."
+        type="search"
+      />
+    </form>
+  </nav>
+</header>
+
+<main>
+  <div class="container mt-5 mb-5">
+    <div id="message"></div>
+    <div class="row justify-content-center">
+
+      <div class="card col-12 col-md-8 ">
+        <h1 class="card-header text-center">Create post</h1>
+        <div class="card-body">
+
+          <form id="createPost">
+
+            <div class="form-group mb-3">
+              <div class="form-floating">
+
+                <input class="form-control"
+                       id="title"
+                       name="title"
+                       placeholder="Title"
+                       required
+                       type="text"
+                />
+                <label for="title">Title</label>
+                <div class="invalid-feedback">Invalid Username</div>
+              </div>
+            </div>
+
+            <div class="form-group mb-3">
+              <div class="form-floating">
+
+                <textarea class="form-control"
+                          id="body"
+                          name="body"
+                          placeholder="Write your post"
+                          required>
+
+                </textarea>
+                <label for="body">Body</label>
+                <div class="invalid-feedback">Invalid Text</div>
+              </div>
+            </div>
+
+            <div class="form-group mb-3">
+              <div class="form-floating">
+                <input class="form-control"
+                       id="tags"
+                       name="tags"
+                       placeholder="Tag"
+                       type="text" />
+                <label for="tags">Tags</label>
+                <div class="invalid-feedback">Invalid Tag</div>
+              </div>
+            </div>
+
+            <div class="form-group mb-3">
+              <div class="form-floating">
+                <input class="form-control"
+                       id="media"
+                       name="media"
+                       type="url" />
+                <label for="media">Media</label>
+                <div class="invalid-feedback">Invalid Media</div>
+              </div>
+            </div>
+
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <button class="btn btn-success"
+                      name="create"
+                      type="submit">Create Post
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="bg-dark text-light pt-5 pb-4">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-6 col-xs-12">
+        <h5>About Us</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vehicula magna vel venenatis venenatis.</p>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a class="text-light" href="#">Home</a></li>
+          <li><a class="text-light" href="#">About</a></li>
+          <li><a class="text-light" href="#">Services</a></li>
+          <li><a class="text-light" href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12">
+        <h5>Contact Us</h5>
+        <p>
+          123 Street Name<br>
+          City, ABC 12345<br>
+          Email: example@example.com<br>
+          Phone: +123 456 7890
+        </p>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12">
+        <h5>Follow Us</h5>
+        <ul class="list-unstyled">
+          <li><a class="text-light" href="#">Facebook</a></li>
+          <li><a class="text-light" href="#">Twitter</a></li>
+          <li><a class="text-light" href="#">Instagram</a></li>
+          <li><a class="text-light" href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col text-center">
+        <p>©2024 Your Company. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
+
